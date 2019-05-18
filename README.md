@@ -1,1 +1,1 @@
-# GB_Pythons_Algoritms
+Tasks for course GB Python Algoritms
