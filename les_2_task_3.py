@@ -11,18 +11,18 @@ def get_reverse_digits(digits):
     len_digits = len(str(digits))
 
     if len_digits == 1:
-        return digits * (dec ** (initial_len - 1))
+        return digits * (dec ** (INITIAL_LEN - 1))
 
     dec_digits = dec ** (len_digits - 1)
     digit = digits // dec_digits
 
-    reverse_digits += (digit * (dec ** (initial_len - len_digits))
+    reverse_digits += (digit * (dec ** (INITIAL_LEN - len_digits))
                        + get_reverse_digits(digits - digit * dec_digits))
     return reverse_digits
 
 
 digits = int(input('Введите натуральное число: '))
-initial_len = len(str(digits))
+INITIAL_LEN = len(str(digits))
 reverse_digits = get_reverse_digits(digits)
 
 print('Введенное число {}  - обратное число {}'.format(digits, reverse_digits))
