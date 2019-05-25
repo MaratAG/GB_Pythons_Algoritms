@@ -4,8 +4,8 @@
 """
 
 
-def its_our_digit(digit):
-    return 1 if digit == our_digit else 0
+def its_digit_for_count(digit):
+    return 1 if digit == digit_for_count else 0
 
 
 def count_occurrences_of_number(digits):
@@ -14,20 +14,20 @@ def count_occurrences_of_number(digits):
     len_digits = len(str(digits))
 
     if len_digits == 1:
-        return its_our_digit(digits)
+        return its_digit_for_count(digits)
 
     dec_digits = dec ** (len_digits - 1)
     digit = digits // dec_digits
-    counter_occurences += its_our_digit(digit) + count_occurrences_of_number(digits - digit * dec_digits)
+    counter_occurences += its_digit_for_count(digit) + count_occurrences_of_number(digits - digit * dec_digits)
     return counter_occurences
 
 
 sum_counters_of_occurrences = 0
-our_digit = int(input('Введите цифру, количество вхождений которой нужно посчитать: '))
+digit_for_count = int(input('Введите цифру, количество вхождений которой нужно посчитать: '))
 count_of_number = int(input('Введите количество вводимых чисел для подсчета вхождений цифры: '))
 
 for _ in range(count_of_number):
     digits = int(input('Введите число для подсчета вхождения цифры: '))
     sum_counters_of_occurrences += count_occurrences_of_number(digits)
 
-print('Цифра {} встречается в введенной последовательности {} раз.'.format(our_digit, sum_counters_of_occurrences))
+print('Цифра {} встречается в последовательности {} раз.'.format(digit_for_count, sum_counters_of_occurrences))
