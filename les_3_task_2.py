@@ -8,16 +8,16 @@
 import random
 
 
-def get_random_list():
-    return [random.randint(START_RANDOM, FINISH_RANDOM) for _ in range(SIZE)]
+def get_random_list(size, start, finish):
+    return [random.randint(start, finish) for _ in range(size)]
 
 
 SIZE = 10
 START_RANDOM = 1
 FINISH_RANDOM = 1000
 
-current_list = get_random_list()
+current_list = get_random_list(SIZE, START_RANDOM, FINISH_RANDOM)
 result_list = [index for index in range(len(current_list)) if current_list[index] % 2 == 0]
 
-print('Исходный массив {}:'.format(current_list))
-print('Массив индексов четных элементов исходного массива {}: '.format(result_list))
+print('Исходный массив {}'.format(current_list))
+print('Массив индексов четных элементов исходного массива {}'.format(result_list))
