@@ -50,4 +50,3 @@ for key, value in min_items_of_columns.items():
 
 print('Максимальный {} среди минимальных элементов столбцов матрицы '
       'находится по индексам: {}'.format(max_item, min_items_of_columns[max_item]))
-
