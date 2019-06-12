@@ -1,4 +1,5 @@
 """
+Задача 4.1: Оценить сложность 3 вариантов реализации задачи:
 Задача 3.4. Определить, какое число в массиве встречается чаще всего.
 """
 
@@ -100,13 +101,10 @@ def main():
     start_random = 1
     finish_random = 1000
 
-    print('АЛГОРИТМ №1:')
     execute_algorithm_1(size, start_random, finish_random, True)
 
-    print('АЛГОРИТМ №2:')
     execute_algorithm_2(size, start_random, finish_random, True)
 
-    print('АЛГОРИТМ №3:')
     execute_algorithm_3(size, start_random, finish_random, True)
 
 
