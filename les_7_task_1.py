@@ -38,8 +38,8 @@ def bubble_sort(array_for_sort):
 
 
 SIZE = 10
-START_RANDOM = 0
-FINISH_RANDOM = 100
+START_RANDOM = -100
+FINISH_RANDOM = 99
 
 array_for_sort = get_random_list(SIZE, START_RANDOM, FINISH_RANDOM)
 sorted_array = bubble_sort(array_for_sort)
